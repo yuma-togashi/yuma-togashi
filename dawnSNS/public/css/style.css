@@ -1,0 +1,255 @@
+@charset "utf-8";
+html{
+}
+body{
+}
+/* header */
+header{
+    position: relative;
+    background:#3C4767;
+    height: 70%;
+}
+
+.img_logo {
+    background: #fff;
+    width:  50px;       /* ※縦横を同値に */
+    height: 50px;
+    border-radius: 50%;
+    background-position: left top;
+    display: inline-block;
+    background-color: #fff
+}
+/* 新規投稿 */
+.container {
+  height: 8vw;
+  border-bottom: 5px solid silver;
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-control{
+  width: 500px;
+  height: 50px;
+  outline: none;
+  border: none;
+}
+
+.btn-right{
+  margin-left: 500px;
+  border: none;
+  background: transparent;
+}
+
+/* 投稿一覧 */
+.post-logo{
+    background: #fff;
+    width:  50px;       /* ※縦横を同値に */
+    height: 50px;
+    border-radius: 50%;
+    background-position: left top;
+    display: inline;
+    background-color: #fff
+}
+.post-username{
+  margin-top:2vw;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+.post-timeline{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1vw;
+  margin-bottom: 5px;
+}
+
+.post-time{
+  margin: 1vw 0 0 50vw;
+  display: inline-block;
+}
+/* アコーディオンメニュー */
+#menu{
+  position: absolute;
+  width: 318px;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  z-index: 100;
+  color: #fff;
+}
+
+.a-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 318px;
+  cursor: pointer;
+  color: blue;
+  text-align: center;
+  margin: 7px 0px;
+}
+
+.a-click{
+  color: white;
+}
+
+.a-click:hover{
+  color: white;
+  text-decoration:	none;
+}
+
+.a-click:after{
+  content: '\f107';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #fff;
+  width: 10px;
+  padding-left: 10px;
+}
+
+.a-click.on:after{
+  content: '\f106';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+.user-info{
+  position: absolute;
+  overflow: hidden;
+  z-index: 100;
+  height: 240px;
+  display: none;
+}
+
+.a-item{
+  display: block;
+  width: 317px;
+  height: 80px;
+  background-color: #fff;
+  color: #708090;
+  border-bottom: 1px solid #708090;
+  border-left: 1px solid #708090;
+  border-left: 1px solid #708090;
+  transition: 0.3s;
+}
+
+.a-item a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  letter-spacing: 3px;
+  padding-top: 25px;
+}
+
+.a-item a:hover{
+  display: block;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.a-item:hover{
+  display: block;
+  width: 100%;
+  height: 80px;
+  background-color: #FF6600;
+  /* background-color: #47a1b3; */
+  border: 1px solid #708090;
+  transition: 0.3s;
+}
+
+.head-icon{
+  margin: 0 10px;
+}
+
+/* main content */
+#row{
+    display: flex;
+    flex-flow: row wrap;
+}
+#container{
+    flex: 0 0 80%;
+}
+#side-bar{
+    flex: 0 0 19%;
+    border-left: 1px solid #6C6C6C;
+}
+
+/* モーダル */
+.edit-img{
+  width: 28px;
+  height: auto;
+}
+
+.edit-modal{ /* ① */
+  display: none;
+}
+
+.inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #666666;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.inner-contents{
+  padding: 40px;
+  margin-bottom: 1vw;
+  border: 2px solid gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 300px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  z-index: 5;
+}
+
+.inner-post-edit-image{
+  display: inline-block;
+  border: none;
+  margin:0.5vw 0 0 6vw;
+}
+
+.edit-png{
+  float: right;
+}
+
+.user-post-edit-contents{
+  color: gray;
+  height: 50px;
+  width: 100%;
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin-left: 2vw;
+}
+
+/* delete */
+.trash:hover{
+  background-image: url("../images/trash.png");
+}
+
+.trash{
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 6px 12px;
+  border-style: none;
+}
